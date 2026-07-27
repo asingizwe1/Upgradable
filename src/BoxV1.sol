@@ -38,3 +38,7 @@ return 1;
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 }
 //proxies point to slot number instead of name od variables
+
+/**When you upgrade from BoxV1 to BoxV2, you’re only swapping out the logic contract (the implementation).
+
+The proxy keeps the same storage, so all your data (like number = 42) stays intact. */
